@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="expenses.html">Expenses</a></li>
+            <li><a href="budget.html">Budgeting</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="form-container container-head">
+        <!-- Expense Categories -->
+            <div class="categories-container">
+            <form id="food-form" class="category">
+                <h3>Food and Drinks</h3>
+                <label for="food-item-name">Item Name:</label>
+                <input type="text" placeholder="Enter item name" id="food-item-name">
+                <label for="food-item-price">Item Price:</label>
+                <input type="number" placeholder="Enter item price" id="food-item-price" step="0.01">
+                <label for="food-item-date">Item Date:</label>
+                <input type="date" id="food-item-date">
+                <button type="button" class="add-item-btn" id="add-food-item">+</button>
+            </form>
+
+            <form id="luxury-form" class="category">
+                <h3>Luxury</h3>
+                <label for="luxury-item-name">Item Name:</label>
+                <input type="text" placeholder="Enter item name" id="luxury-item-name">
+                <label for="luxury-item-price">Item Price:</label>
+                <input type="number" placeholder="Enter item price" id="luxury-item-price" step="0.01">
+                <label for="luxury-item-date">Item Date:</label>
+                <input type="date" id="luxury-item-date">
+                <button type="button" class="add-item-btn" id="add-luxury-item">+</button>
+            </form>
+
+            <form id="health-form" class="category">
+                <h3>Health and Beauty</h3>
+                <label for="health-item-name">Item Name:</label>
+                <input type="text" placeholder="Enter item name" id="health-item-name">
+                <label for="health-item-price">Item Price:</label>
+                <input type="number" placeholder="Enter item price" id="health-item-price" step="0.01">
+                <label for="health-item-date">Item Date:</label>
+                <input type="date" id="health-item-date">
+                <button type="button" class="add-item-btn" id="add-health-item">+</button>
+            </form>
+
+            <form id="bills-form" class="category">
+                <h3>Recurring Bills</h3>
+                <label for="bills-item-name">Item Name:</label>
+                <input type="text" placeholder="Enter item name" id="bills-item-name">
+                <label for="bills-item-price">Item Price:</label>
+                <input type="number" placeholder="Enter item price" id="bills-item-price" step="0.01">
+                <label for="bills-item-date">Item Date:</label>
+                <input type="date" id="bills-item-date">
+                <button type="button" class="add-item-btn" id="add-bills-item">+</button>
+            </form>
+
+            <form id="travel-form" class="category">
+                <h3>Travel</h3>
+                <label for="travel-item-name">Item Name:</label>
+                <input type="text" placeholder="Enter item name" id="travel-item-name">
+                <label for="travel-item-price">Item Price:</label>
+                <input type="number" placeholder="Enter item price" id="travel-item-price" step="0.01">
+                <label for="travel-item-date">Item Date:</label>
+                <input type="date" id="travel-item-date">
+                <button type="button" class="add-item-btn" id="add-travel-item">+</button>
+            </form>
+        </div>
+        <h3>Total Expenses: $<span id="total-expenses">0.00</span></h3>
+
+        <!-- Chart Canvas -->
+        <canvas id="expensesChart" width="400" height="200" style="margin-top: 20px;"></canvas>
+    </div>
+    <iframe style="background: #F1F5F4;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);width: 800px;height: 500px;" 
+     src="https://charts.mongodb.com/charts-project-0-vyxatft/embed/dashboards?id=4319ff35-65a8-48bd-a0b6-78d71f710950&theme=light&autoRefresh=true&maxDataAge=3600&showTitleAndDesc=false&scalingWidth=fixed&scalingHeight=fixed"></iframe>
+    <script src="expense.js"></script>
+</body>
+</html>

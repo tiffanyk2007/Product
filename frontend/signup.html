@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inline CSS for simplicity, you can move this to style.css */
+        .input-group {
+            margin-bottom: 15px; /* Space between input groups */
+        }
+
+        .password-criteria {
+            list-style-type: disc; /* Bullet points */
+            margin-left: 20px; /* Indent bullet points */
+            padding-left: 0; /* Remove padding for bullet points */
+            color: #666; /* Change color to differentiate from other text */
+        }
+
+        .password-criteria li {
+            font-size: 0.8em; /* Make each list item smaller */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="new-username">Create new username:</label>
+                <input type="text" id="new-username" required>
+            </div>
+            <div class="input-group">
+                <label for="new-password">Create password:</label>
+                <input type="password" id="new-password" required>
+                <ul class="password-criteria">
+                    <li>Must be at least 8 characters long</li>
+                    <li>Must contain at least one lowercase letter</li>
+                    <li>Must contain at least one uppercase letter</li>
+                    <li>Must contain at least one number (e.g. 1)</li>
+                    <li>Must contain at least one special character (e.g. !$@)</li>
+                </ul>
+            </div>
+            <button type="submit">Sign Up</button>
+            <p id="error-message" class="error-message"></p>
+        </form>
+        <p>Already have an account? <a href="login.html">Log in</a></p>
+    </div>
+
+    <script src="user.js"></script>
+</body>
+</html>

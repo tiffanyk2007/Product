@@ -1,0 +1,507 @@
+/* Global Styles */
+
+  /* Want List Styles */
+
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+  
+  #want-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #want-items li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+  }
+  
+  #want-items li:last-child {
+    border-bottom: none;
+  }
+
+  #need-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #need-items li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+  }
+  
+  #need-items li:last-child {
+    border-bottom: none;
+  }
+  
+ /* Dragging Styles */
+  /* Ensure the list is styled well */
+.draggable-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+  }
+  
+  /* Styling each item in the list */
+  .draggable-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: grab;
+  }
+  
+  /* Change cursor to grabbing during drag */
+  .draggable-list li:active {
+    cursor: grabbing;
+  }
+  
+  /* Highlight item when it's being dragged over */
+  .draggable-list li.over {
+    border: 2px dashed #000;
+    background-color: #ddd;
+  }
+  
+  /* Optional: Add a transition effect for better visual feedback */
+  .draggable-list li {
+    transition: background-color 0.2s ease, border 0.2s ease;
+  }
+  
+  /* Make sure hidden elements (during drag) don't interfere with layout */
+  .draggable-list li[style*="display: none;"] {
+    display: none !important;
+  }
+ 
+
+/* Position Calculate Plan button and result */
+.calculate-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+button.calculate-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button.calculate-button:hover {
+  background-color: #0056b3;
+}
+
+/* Display result immediately below the Calculate Plan button */
+.calculate-result {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+  /* Button Styles */
+  
+  button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Input Styles */
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  /* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation bar styling */
+nav {
+  background-color: #008080; /* Teal background */
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure the nav is above other content */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center the navigation items */
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff; /* White text color for the links */
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Underline the text when hovered */
+  color: #dcdcdc; /* Lighter text color on hover */
+}
+
+/* Content container styling */
+.content-container {
+  margin-top: 80px; /* Increased margin to add space */
+  text-align: center;
+  display: center;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px); /* Fill remaining height of the screen */
+}
+
+.content-container h2, .content-container p {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Login/Signup Container */
+.login-container, .signup-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+
+
+h1 {
+  color: #333;
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Input Fields */
+input[type="text"], input[type="password"], input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Submit Button */
+button {
+  width: 100%;
+  background-color: #008080; /* Teal color */
+  color: white;
+  padding: 12px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  background-color: #006666; /* Slightly darker teal on hover */
+}
+
+/* Sign-up Text */
+.signup-link {
+  font-size: 0.9rem;
+}
+
+.signup-link a {
+  color: #008080; /* Teal color */
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+  }
+
+  .content-container {
+      height: auto;
+      margin-top: 150px;
+  }
+
+  .login-container, .signup-container {
+      padding: 20px;
+  }
+
+  h1 {
+      font-size: 1.8rem;
+  }
+}
+
+/* Body background styling */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5; /* Light background */
+}
+
+/* Rounded Rectangle for Expense Categories - Expenses Page Only */
+.expense-container {
+  background-color: #f9f9f9; /* Light background for containers */
+  border-radius: 15px; /* Rounded corners */
+  padding: 15px; /* Reduced padding for a smaller container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  display: inline-block; /* Allow containers to sit next to each other */
+  margin: 10px; /* Space between category containers */
+  text-align: center; /* Center text inside the containers */
+}
+
+/* Category Header Style */
+.expense-container h3 {
+  margin: 0;
+  font-size: 1.5rem; /* Larger heading for categories */
+  color: #333; /* Dark text for headings */
+}
+/* Input Fields - Expenses Page Only */
+.input-fields {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between input fields and button */
+}
+
+.input-fields input[type="text"],
+/* Input Fields - Expenses Page Only */
+.input-fields input[type="number"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 400px; /* Increase width */
+  height: 50px; /* Increase height */
+}
+
+/* Add Button - Expenses Page Only */
+.input-fields button {
+  background-color: #008080; /* Teal color for add button */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 50%; /* Rounded button */
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px; /* Circular button */
+}
+
+
+.input-fields button:hover {
+  background-color: #006666; /* Darker teal on hover */
+}
+
+
+/* Responsive Layout for Expense Categories */
+@media (max-width: 768px) {
+  .input-fields {
+      flex-direction: column; /* Stack input fields on mobile */
+      gap: 5px;
+  }
+
+  .expense-container {
+      flex-direction: column; /* Stack containers vertically on mobile */
+      text-align: center;
+  }
+
+  .input-fields input {
+      width: 100%; /* Full width input on mobile */
+  }
+
+  .input-fields button {
+      width: 100%; /* Full width button on mobile */
+      height: auto;
+      border-radius: 5px;
+  }
+}
+
+.categories-container {
+  width: 100%; /* Full width */
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of categories */
+  justify-content: space-around; /* Space out categories */
+}
+
+
+.category {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-basis: 45%; /* Responsive category width */
+  min-width: 250px; /* Minimum width to maintain layout */
+}
+
+.category h3 {
+  margin-top: 0;
+}
+
+.add-item-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-item-btn:hover {
+  background-color: #3e8e41;
+}
+
+#food-item-price, #luxury-item-price, #health-item-price, #bills-item-price {
+  width: 200px; /* Custom width for price input */
+  height: 30px;  /* Custom height for price input */
+}
+
+/* Add styles for chart controls */
+/* Chart controls styling */
+.chart-controls {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center; /* Center the buttons */
+}
+
+.chart-controls button {
+  background-color: #008080; /* Teal color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin: 0 10px; /* Space between buttons */
+}
+
+.chart-controls button:hover {
+  background-color: #006666; /* Darker teal on hover */
+}
+
+/* Content container styling */
+.form-container {
+  margin-top: 80px; /* Increased margin to add space */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items */
+  max-width: 800px; /* Set a max width for better layout */
+  margin-left: auto;
+  margin-right: auto; /* Center the container */
+}
+
+/* Chart Canvas */
+canvas {
+  margin-top: 20px;
+  max-width: 100%; /* Responsive canvas */
+}
+
+button {
+  margin: 0 10px; /* Add margin between buttons */
+}
+
+
+.container-head {
+    margin-top: 200px;
+}
+
+/* Container for Needs section */
+.needs-container {
+  width: 100%;
+  max-width: 400px;
+  max-height: 800px; /* Adjust height as needed */
+  overflow-y: auto;
+  border: 1px solid #ccc; /* Optional: to add a border around the box */
+  padding: 20px;
+  background-color: #f8f9fa; /* Optional: to make it stand out */
+}
+
+/* Container for Wants section */
+.wants-container {
+  width: 100%;
+  max-width: 400px;
+  max-height: 800px; /* Adjust height as needed */
+  overflow-y: auto;
+  border: 1px solid #ccc; /* Optional: to add a border around the box */
+  padding: 20px;
+  background-color: #f8f9fa; /* Optional: to make it stand out */
+}
+
+/* Flex layout for container to space out Needs and Wants sections */
+.container {
+  display: flex;
+  gap: 40px; /* Space between Needs and Wants sections */
+  justify-content: center; /* Center them on the page */
+}
+
