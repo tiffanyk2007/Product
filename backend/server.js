@@ -13,7 +13,9 @@ app.use(cors({
 
 // Middleware to parse incoming requests with JSON payloads
 app.use(bodyParser.json());
-app.use(express.static('frontend')); // Serve static files from the 'frontend' directory
+
+// Serve static files from the 'frontend' directory
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 const bcrypt = require('bcryptjs'); // For hashing passwords
 const session = require('express-session'); // For session management
@@ -44,11 +46,11 @@ mongoose.connect(mongoURI, {
 .catch(err => console.error('MongoDB connection error:', err));
 
 // Serve static files from the 'frontend' directory
-app.use(express.static(path.join(__dirname, 'frontend')));
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Define the route for the root URL
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend', 'login.html'));
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
 
@@ -168,11 +170,6 @@ app.get('/total-expenses', async (req, res) => {
 
 let needs = [];
 let wants = [];
-
-// Serve the HTML file for the budget app
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend', 'budget.html'));
-});
 
 // API to add a need item
 app.post('/add-need', (req, res) => {
