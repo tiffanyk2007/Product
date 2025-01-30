@@ -13,7 +13,7 @@ app.use(cors({
 
 // Middleware to parse incoming requests with JSON payloads
 app.use(bodyParser.json());
-app.use(express.static('FinanceBuddy')); // Serve static files from the 'FinanceBuddy' directory
+app.use(express.static('frontend')); // Serve static files from the 'frontend' directory
 
 const bcrypt = require('bcryptjs'); // For hashing passwords
 const session = require('express-session'); // For session management
@@ -43,12 +43,12 @@ mongoose.connect(mongoURI, {
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
 
-// Serve static files from the 'FinanceBuddy' directory
-app.use(express.static(path.join(__dirname, 'FinanceBuddy')));
+// Serve static files from the 'frontend' directory
+app.use(express.static(path.join(__dirname, 'frontend')));
 
 // Define the route for the root URL
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'FinanceBuddy', 'login.html'));
+    res.sendFile(path.join(__dirname, 'frontend', 'login.html'));
 });
 
 
@@ -171,7 +171,7 @@ let wants = [];
 
 // Serve the HTML file for the budget app
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'FinanceBuddy', 'budget.html'));
+    res.sendFile(path.join(__dirname, 'frontend', 'budget.html'));
 });
 
 // API to add a need item
