@@ -187,7 +187,7 @@ let remainingIncome = 0; // Initialize remaining income
 
 async function loadBudget() {
     try {
-        const response = await fetch('/load-budget');
+        const response = await fetch('https://product-1-7zzv.onrender.com/load-budget'); // Updated with the Render URL
         if (!response.ok) {
             throw new Error('Failed to load budget');
         }
@@ -210,12 +210,12 @@ async function loadBudget() {
 // Save the current state of Needs, Wants, and Remaining Income to the server
 async function saveBudget() {
     try {
-        const response = await fetch('/save-budget', {
+        const response = await fetch('https://product-1-7zzv.onrender.com/save-budget', { // Updated with the Render URL
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ needs, wants, remainingIncome })
         });
-        
+
         if (response.ok) {
             document.getElementById('save-message').innerText = 'Budget saved successfully!';
             console.log('Budget saved successfully!');
@@ -228,7 +228,6 @@ async function saveBudget() {
         document.getElementById('save-message').innerText = 'Error saving budget';
     }
 }
-
 
 // Update the "Needs" list items in the UI
 function updateNeedItems() {
